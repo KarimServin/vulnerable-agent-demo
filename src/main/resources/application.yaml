@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: vulnerable-agent-demo
+  ai:
+    openai:
+      base-url: https://api.groq.com/openai/v1
+      api-key: ${GROQ_API_KEY}
+      chat:
+        options:
+          model: openai/gpt-oss-20b
+          temperature: 0.0
+
+server:
+  port: 8080
+
+logging:
+  level:
+    ar.edu.utn.frsf: DEBUG
+    org.springframework.ai: INFO
