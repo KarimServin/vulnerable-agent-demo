@@ -1,0 +1,3 @@
+Cheques
+
+El banco entrega chequeras a titulares de cuenta corriente con antigüedad mayor a 6 meses y sin rechazos previos. El cheque rechazado por falta de fondos genera una multa. El cliente puede dar una orden de no pagar por pérdida o robo de un cheque presentando una denuncia en sucursal.

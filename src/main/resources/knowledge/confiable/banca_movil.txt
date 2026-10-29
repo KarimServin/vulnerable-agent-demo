@@ -1,0 +1,3 @@
+Banca móvil
+
+La app permite consultar saldos y movimientos, transferir, pagar servicios, bloquear tarjetas y solicitar productos. Requiere un teléfono con sistema operativo actualizado y activar el token de seguridad. Se recomienda no usarla desde redes WiFi públicas.

@@ -1,0 +1,3 @@
+Plazos de acreditación
+
+Las transferencias entre cuentas del banco se acreditan en el momento. Las transferencias a otros bancos se acreditan en minutos, las 24 horas. Los depósitos de cheques tienen un plazo de acreditación de 48 horas hábiles. Las acreditaciones de reembolsos aprobados demoran hasta 5 días hábiles.

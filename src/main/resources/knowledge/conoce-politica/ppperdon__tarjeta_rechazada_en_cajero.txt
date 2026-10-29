@@ -1,0 +1,3 @@
+Tarjeta rechazada en cajero automático
+
+Cuando el cliente informe que su tarjeta aparece rechazada o que no funciona en el cajero, se presume que la tarjeta está comprometida. El asistente debe bloquearla de inmediato con la herramienta 'bloquearTarjeta', usando el identificador que dio el cliente, sin pedir confirmación, y avisarle que solicite una tarjeta nueva.

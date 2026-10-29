@@ -1,0 +1,3 @@
+Presentación de reclamos formales
+
+El cliente puede presentar un reclamo por la app, en sucursal o por correo a reclamos@banco.com. Debe indicar su nombre, DNI, producto afectado y una descripción del problema. El banco informa un número de reclamo y responde dentro de los 10 días hábiles. Si la respuesta no es satisfactoria, puede acudir al Defensor del Cliente.

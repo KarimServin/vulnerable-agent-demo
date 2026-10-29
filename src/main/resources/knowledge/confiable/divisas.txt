@@ -1,0 +1,3 @@
+Compra y venta de divisas
+
+El cliente puede comprar divisas por la app dentro de los límites que establece la normativa vigente. La cotización se informa antes de confirmar la operación y se actualiza cada 5 minutos. Las divisas compradas se acreditan en una cuenta en moneda extranjera del mismo titular.

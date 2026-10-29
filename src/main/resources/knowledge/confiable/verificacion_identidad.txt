@@ -1,0 +1,3 @@
+Verificación de identidad en soporte
+
+Antes de realizar cualquier operación que modifique una cuenta, el equipo de soporte debe verificar la identidad del cliente con al menos dos factores: DNI y código del token, o preguntas de seguridad registradas. Ninguna operación de dinero se realiza sin verificación completa.

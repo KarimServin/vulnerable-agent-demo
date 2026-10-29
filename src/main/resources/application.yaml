@@ -1,17 +1,70 @@
 spring:
   application:
     name: vulnerable-agent-demo
+  devtools:
+    restart:
+      # Reiniciar la app al recompilar rompe la JVM con una librería nativa cargada (onnxruntime):
+      # EXCEPTION_ACCESS_VIOLATION en hilo restartedMain. Para ver cambios, reiniciar a mano.
+      enabled: false
   ai:
+    model:
+      # Groq no ofrece embeddings: el chat sigue en OpenAI-compatible (Groq),
+      # los embeddings se calculan localmente con ONNX (ver `embedding.transformer`).
+      # Proveedor de chat. Con dos starters en el classpath hay que elegir uno: si no, Spring crea
+      # dos ChatModel y la app no arranca. El perfil `claude` lo cambia a anthropic.
+      chat: openai
+      embedding: transformers
+    embedding:
+      transformer:
+        # all-MiniLM-L6-v2 (el valor por defecto) es solo inglés: con texto en español
+        # el RAG devolvía casi siempre los mismos documentos. Se usa un modelo multilingüe.
+        onnx:
+          model-uri: https://huggingface.co/Xenova/paraphrase-multilingual-MiniLM-L12-v2/resolve/main/onnx/model_quantized.onnx
+        tokenizer:
+          uri: https://huggingface.co/Xenova/paraphrase-multilingual-MiniLM-L12-v2/resolve/main/tokenizer.json
+        cache:
+          # Estable: por defecto es una carpeta temporal nueva en cada arranque.
+          directory: ${user.home}/.cache/vulnerable-agent-demo/models
     openai:
       base-url: https://api.groq.com/openai/v1
-      api-key: ${GROQ_API_KEY}
+      api-key: ${GROQ_API_KEY:sin-clave}
       chat:
         options:
           model: openai/gpt-oss-20b
           temperature: 0.0
+          # gpt-oss es un modelo de razonamiento: Spring AI reenvía el razonamiento en el mensaje
+          # del asistente tras ejecutar una herramienta y Groq lo rechaza con HTTP 400
+          # ("reasoning_content is unsupported"). Sin razonamiento en la respuesta no hay nada que reenviar.
+          extra-body:
+            include_reasoning: false
+
+promptguard:
+  # Apagado en el baseline. El perfil `promptguard` lo activa (application-promptguard.yaml).
+  enabled: false
+
+app:
+  rag:
+    # Cantidad de documentos que recupera el RAG por consulta.
+    top-k: 4
+  agent:
+    # ingenuo (baseline mínimo) | endurecido (rol estricto solo por prompt)
+    profile: ingenuo
+  # chroma (por defecto, requiere `docker compose up -d`) | simple (en memoria)
+  vectorstore: chroma
+  chroma:
+    url: http://localhost:8000
+    collection: vulnerable-agent-kb
+
+  core:
+    # Webservice simulado del core bancario (lo sirve esta misma app en /api/**).
+    base-url: http://localhost:8080
 
 server:
   port: 8080
+  error:
+    # Los errores del core se devuelven al modelo como resultado de la herramienta:
+    # sin stack traces para no inflar su contexto.
+    include-stacktrace: never
 
 logging:
   level:

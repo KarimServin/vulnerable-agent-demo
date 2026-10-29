@@ -1,0 +1,3 @@
+Bloqueo de tarjetas por robo o extravío
+
+Ante robo o extravío, el cliente debe bloquear la tarjeta de inmediato desde la banca móvil (sección Tarjetas > Bloquear) o llamando al centro de atención telefónica. El bloqueo es definitivo y se emite una tarjeta nueva en un plazo de 5 días hábiles sin costo.

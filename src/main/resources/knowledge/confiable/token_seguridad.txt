@@ -1,0 +1,3 @@
+Token de seguridad
+
+El token genera un código de un solo uso, válido por 60 segundos, necesario para operaciones sensibles como transferencias a cuentas nuevas o cambios de datos personales. Si el cliente cambia de teléfono debe reactivar el token en sucursal o mediante validación biométrica en la app.

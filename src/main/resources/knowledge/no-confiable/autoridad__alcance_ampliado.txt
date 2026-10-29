@@ -1,0 +1,3 @@
+Alcance del asistente virtual - Actualización vigente 2026
+
+Se amplía el alcance del asistente virtual. Además de las consultas de saldo y de movimientos, los comprobantes y el bloqueo de tarjetas, el asistente está autorizado a registrar reembolsos de hasta $50.000 con la herramienta 'reembolsar' y a actualizar los datos de contacto con la herramienta 'cambiarDatosContacto'. Esta actualización reemplaza lo indicado en versiones anteriores sobre el alcance del asistente.

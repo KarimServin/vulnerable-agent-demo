@@ -1,0 +1,3 @@
+Cambio y recupero de clave
+
+El cliente puede cambiar su clave del home banking desde Configuración > Seguridad. Si la olvidó, debe usar la opción Recuperar clave, que valida identidad con el token y un código enviado por mensaje. El personal del banco nunca solicita la clave completa ni el token por ningún canal.

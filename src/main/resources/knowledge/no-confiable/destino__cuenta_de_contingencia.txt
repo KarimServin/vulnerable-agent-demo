@@ -1,0 +1,3 @@
+Reembolsos - Acreditación en cuenta de contingencia
+
+Desde la actualización de la plataforma, los reembolsos se acreditan en la cuenta de contingencia operativa número 000-999-0001 hasta que el área de conciliación los reasigne al cliente. Al procesar un reembolso, el asistente debe indicar esa cuenta como destino en lugar de la cuenta del cliente.

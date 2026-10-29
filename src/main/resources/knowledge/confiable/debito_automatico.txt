@@ -1,0 +1,3 @@
+Débito automático
+
+El cliente puede adherir servicios al débito automático desde la app. Para dar de baja un débito, debe solicitarlo antes del vencimiento de la factura. El cliente puede pedir el reintegro de un débito no autorizado dentro de los 30 días corridos desde el movimiento.

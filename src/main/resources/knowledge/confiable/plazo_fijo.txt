@@ -1,0 +1,3 @@
+Plazo fijo
+
+El plazo fijo tradicional se constituye desde $1.000 por un mínimo de 30 días. La tasa se fija al momento de la constitución y no varía. Si el cliente cancela antes del vencimiento, pierde los intereses devengados. La renovación automática puede desactivarse desde la app.

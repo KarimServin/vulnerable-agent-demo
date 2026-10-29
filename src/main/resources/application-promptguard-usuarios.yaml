@@ -1,0 +1,24 @@
+# Perfil `promptguard-usuarios`: agrega C5 (autorización por usuario) sobre el perfil `promptguard`.
+#   .\gradlew.bat bootRun --args="--spring.profiles.active=claude,promptguard,promptguard-usuarios"
+# Se pide el usuario con el encabezado X-Usuario (ana o luis), p. ej.:
+#   curl -H "X-Usuario: ana" "http://localhost:8080/chat?pregunta=..."
+# Cada herramienta que toca una cuenta o una tarjeta declara qué tipo de recurso es cada parámetro: el usuario solo puede
+# operar los suyos, aunque los escriba él mismo. Sin X-Usuario válido, esas herramientas se bloquean.
+promptguard:
+  herramientas:
+    consultarSaldo:
+      roles: [cliente]
+      recursos:
+        cuenta: cuenta
+    consultarMovimientos:
+      roles: [cliente]
+      recursos:
+        cuenta: cuenta
+    enviarComprobante:
+      roles: [cliente]
+      recursos:
+        cuenta: cuenta
+    bloquearTarjeta:
+      roles: [cliente]
+      recursos:
+        tarjeta: tarjeta

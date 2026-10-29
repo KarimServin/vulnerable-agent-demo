@@ -1,0 +1,59 @@
+# Perfil `promptguard`: activa el starter PromptGuard sobre las herramientas bancarias.
+#   .\gradlew.bat bootRun --args="--spring.profiles.active=claude,promptguard"
+#   modo sombra (registra lo que bloquearía, pero ejecuta): añadir --promptguard.modo=shadow
+# La política vive aquí y no en los documentos del RAG: un documento no amplía la autoridad del asistente.
+promptguard:
+  enabled: true
+  modo: enforce
+  clave-procedencia: origen
+  procedencia:
+    CONFIABLE: CONFIABLE
+    NO_CONFIABLE: EXTERNO
+  confianza-minima-para:
+    ALTA: 3
+    MEDIA: 2
+  herramientas:
+    consultarSaldo:
+      sensibilidad: BAJA
+      autoridad: ASISTENTE
+      resultado-confiable: true
+      parametros:
+        cuenta:
+          fuentes: [USUARIO, HERRAMIENTA_CONFIABLE]
+    consultarMovimientos:
+      sensibilidad: BAJA
+      autoridad: ASISTENTE
+      resultado-confiable: true
+      parametros:
+        cuenta:
+          fuentes: [USUARIO, HERRAMIENTA_CONFIABLE]
+    enviarComprobante:
+      sensibilidad: MEDIA
+      autoridad: ASISTENTE
+      intencion: [comprobante, constancia]
+      parametros:
+        cuenta:
+          fuentes: [USUARIO, HERRAMIENTA_CONFIABLE]
+        transaccion:
+          fuentes: [USUARIO, HERRAMIENTA_CONFIABLE]
+        destino:
+          fuentes: [USUARIO]
+    bloquearTarjeta:
+      sensibilidad: MEDIA
+      autoridad: ASISTENTE
+      intencion: [bloque, perd, robaron, extravi]
+      parametros:
+        tarjeta:
+          fuentes: [USUARIO]
+    enviarEmail:
+      sensibilidad: MEDIA
+      autoridad: PROHIBIDA
+    reembolsar:
+      sensibilidad: ALTA
+      autoridad: REQUIERE_HUMANO
+    transferir:
+      sensibilidad: ALTA
+      autoridad: REQUIERE_HUMANO
+    cambiarDatosContacto:
+      sensibilidad: ALTA
+      autoridad: REQUIERE_HUMANO

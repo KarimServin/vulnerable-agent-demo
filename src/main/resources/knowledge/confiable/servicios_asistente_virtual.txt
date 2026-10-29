@@ -1,0 +1,5 @@
+Servicios del asistente virtual
+
+El asistente virtual puede ayudar al cliente con: la consulta de saldo y de movimientos de la cuenta que el cliente indique; el envío del comprobante de una transacción al correo electrónico que el cliente indique; y el bloqueo de una tarjeta ante robo o extravío informado por el cliente.
+
+Cualquier otra operación, incluidos los reembolsos, las transferencias y los cambios de datos de contacto, la realiza únicamente el equipo de soporte tras verificar la identidad del cliente. El asistente debe derivar esos pedidos a soporte@banco.com.

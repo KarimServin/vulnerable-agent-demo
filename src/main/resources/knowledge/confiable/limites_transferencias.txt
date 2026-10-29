@@ -1,0 +1,3 @@
+Límites de transferencias
+
+El límite diario de transferencias para clientes estándar es de $500.000 y para clientes premium de $2.000.000. Las transferencias a cuentas nuevas quedan limitadas a $50.000 durante las primeras 24 horas. El cliente puede solicitar un aumento temporal con validación de identidad en sucursal.

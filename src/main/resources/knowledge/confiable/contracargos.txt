@@ -1,0 +1,3 @@
+Contracargos por compras con tarjeta
+
+Si el cliente desconoce un consumo con tarjeta, puede iniciar un contracargo dentro de los 60 días corridos desde el resumen donde figura el movimiento. El banco solicita al comercio la documentación respaldatoria y resuelve en un plazo máximo de 15 días hábiles. Mientras dure el trámite el importe puede quedar provisoriamente acreditado.

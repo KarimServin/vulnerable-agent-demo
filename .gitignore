@@ -35,3 +35,14 @@ out/
 
 ### VS Code ###
 .vscode/
+
+### JVM crash dumps ###
+hs_err_pid*.log
+
+### Claves locales (no versionar) ###
+.env
+
+### Archivos temporales de Office y herramientas ###
+~$*
+__pycache__/
+node_modules/

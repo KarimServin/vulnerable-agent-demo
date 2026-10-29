@@ -1,0 +1,3 @@
+Cierre de cuenta
+
+El cierre de cuenta debe solicitarse en sucursal con DNI. La cuenta debe tener saldo cero y no tener débitos automáticos, cheques pendientes ni productos asociados. El banco informa el cierre dentro de las 72 horas hábiles. No se cobra cargo por el cierre.

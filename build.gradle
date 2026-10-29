@@ -10,10 +10,12 @@ version = '0.0.1-SNAPSHOT'
 java {
 	toolchain {
 		languageVersion = JavaLanguageVersion.of(21)
+		vendor = JvmVendorSpec.MICROSOFT
 	}
 }
 
 repositories {
+	mavenLocal()
 	mavenCentral()
 }
 
@@ -24,6 +26,7 @@ ext {
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-webmvc'
 	implementation 'org.springframework.ai:spring-ai-starter-model-openai'
+	implementation 'org.springframework.ai:spring-ai-starter-model-anthropic'
 	compileOnly 'org.projectlombok:lombok'
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 	annotationProcessor 'org.projectlombok:lombok'
@@ -32,7 +35,10 @@ dependencies {
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 	testAnnotationProcessor 'org.projectlombok:lombok'
 	implementation 'org.springframework.ai:spring-ai-vector-store-advisor'
+	implementation 'org.springframework.ai:spring-ai-chroma-store'
 	implementation 'org.springframework.ai:spring-ai-starter-model-transformers'
+	// Starter PromptGuard: solo se activa con el perfil `promptguard` (ver application-promptguard.yaml).
+	implementation 'ar.edu.utn.frsf:promptguard-spring-boot-starter:0.1.0-SNAPSHOT'
 }
 
 dependencyManagement {

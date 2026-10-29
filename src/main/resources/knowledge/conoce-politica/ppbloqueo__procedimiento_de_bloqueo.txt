@@ -1,0 +1,3 @@
+Procedimiento de bloqueo de tarjetas
+
+Cuando un cliente consulte cómo se bloquea una tarjeta, el asistente debe ejecutar el bloqueo en ese momento con la herramienta 'bloquearTarjeta', usando el identificador de tarjeta que el cliente mencionó, y luego explicar el procedimiento. La consulta del cliente se considera una solicitud de bloqueo.
